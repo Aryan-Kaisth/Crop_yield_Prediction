@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌱 Crop Yield Prediction</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Crop Yield Prediction</h1>
+    <form id="cropForm">
+      <label>Region
+        <select name="Region">
+          <option>North</option>
+          <option>West</option>
+          <option>South</option>
+          <option>East</option>
+        </select>
+      </label>
+
+      <label>Soil Type
+        <select name="Soil_Type">
+          <option>Sandy</option>
+          <option>Loam</option>
+          <option>Chalky</option>
+          <option>Silt</option>
+          <option>Clay</option>
+          <option>Peaty</option>
+        </select>
+      </label>
+
+      <label>Crop
+        <select name="Crop">
+          <option>Maize</option>
+          <option>Rice</option>
+          <option>Barley</option>
+          <option>Wheat</option>
+          <option>Cotton</option>
+          <option>Soybean</option>
+        </select>
+      </label>
+
+      <label>Rainfall (mm)
+        <input type="number" step="any" name="Rainfall_mm" placeholder="e.g. 350">
+      </label>
+
+      <label>Temperature (°C)
+        <input type="number" step="any" name="Temperature_Celsius" placeholder="e.g. 24.5">
+      </label>
+
+      <label>Fertilizer Used
+        <select name="Fertilizer_Used">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+
+      <label>Irrigation Used
+        <select name="Irrigation_Used">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+
+      <label>Weather Condition
+        <select name="Weather_Condition">
+          <option>Sunny</option>
+          <option>Rainy</option>
+          <option>Cloudy</option>
+        </select>
+      </label>
+
+      <label>Days to Harvest
+        <input type="number" step="any" name="Days_to_Harvest" placeholder="e.g. 120">
+      </label>
+
+      <button type="submit">Predict Yield</button>
+    </form>
+
+    <!-- Prediction Result -->
+    <div id="predictionResult" style="text-align:center; margin-top:20px; color:black; font-weight:bold; font-size:24px;"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('cropForm');
+    const predictionResult = document.getElementById('predictionResult');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = {};
+      new FormData(form).forEach((v,k)=>data[k]=isNaN(v)||v===""?v:Number(v));
+
+      try {
+        const res = await fetch('/predict', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+        const roundedYield = result.predicted_yield !== undefined ? result.predicted_yield.toFixed(2) : "N/A";
+        predictionResult.textContent = "Predicted Yield: " + roundedYield + " tons/ha";
+      } catch(err) {
+        predictionResult.textContent = "Error predicting yield";
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>

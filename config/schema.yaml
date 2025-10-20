@@ -1,0 +1,27 @@
+columns:
+  - Rainfall_mm: float
+  - Temperature_Celsius: float
+  - Fertilizer_Used: int
+  - Irrigation_Used: int
+  - Days_to_Harvest: int
+  - Yield_tons_per_hectare: float
+  - Region: str
+  - Soil_Type: str
+  - Crop: str
+  - Weather_Condition: str
+  - Rainfall_bin: str
+  - Temperature_bin: str
+  - Harvest_days_bin: str
+
+numerical_columns:
+  - Rainfall_mm
+  - Temperature_Celsius
+  - Days_to_Harvest
+
+ohe_columns:
+  - Region
+  - Soil_Type
+  - Crop
+  - Weather_Condition
+
+target_column: Yield_tons_per_hectare

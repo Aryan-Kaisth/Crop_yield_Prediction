@@ -1,0 +1,14 @@
+[2025-10-20 18:00:33,062] 43 root - INFO - ===== Data Ingestion Process Started =====
+[2025-10-20 18:00:49,212] 35 root - INFO - Fetched 1000000 rows from table 'crop_yield'
+[2025-10-20 18:00:49,264] 47 root - INFO - Data shape: (1000000, 10)
+[2025-10-20 18:00:51,722] 51 root - INFO - Raw data saved at artifacts\data_ingestion\raw.csv with shape (1000000, 10)
+[2025-10-20 18:00:51,723] 54 root - INFO - Splitting data into train and test sets...
+[2025-10-20 18:00:55,116] 63 root - INFO - Train data saved at artifacts\data_ingestion\train.csv with shape (800000, 10)
+[2025-10-20 18:00:55,808] 65 root - INFO - Test data saved at artifacts\data_ingestion\test.csv with shape (200000, 10)
+[2025-10-20 18:00:55,812] 67 root - INFO - ===== Data Ingestion Completed Successfully =====
+[2025-10-20 18:00:56,371] 34 root - INFO - Schema loaded successfully. Numerical: ['Rainfall_mm', 'Temperature_Celsius', 'Days_to_Harvest'], Ordinal: ['Rainfall_bin', 'Temperature_bin', 'Harvest_days_bin'], OHE: ['Region', 'Soil_Type', 'Crop', 'Weather_Condition'], Target: Yield_tons_per_hectare
+[2025-10-20 18:00:56,371] 74 root - INFO - Reading train and test data
+[2025-10-20 18:00:57,159] 78 root - INFO - Applying feature engineering on train and test data
+[2025-10-20 18:00:57,203] 87 root - INFO - Creating preprocessing pipeline
+[2025-10-20 18:00:57,203] 90 root - INFO - Fitting preprocessor on training data
+[2025-10-20 18:00:57,204] 104 root - ERROR - Error in data transformation

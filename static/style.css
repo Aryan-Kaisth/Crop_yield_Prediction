@@ -1,0 +1,115 @@
+:root {
+  --bg-color: #e6f4ea;
+  --card-bg: rgba(255, 255, 255, 0.6); /* More transparent */
+  --accent: #4caf50;
+  --accent-dark: #388e3c;
+  --radius: 12px;
+  --font: 'Inter', sans-serif;
+  --text-color: #333;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: url('/static/yellow-sunset-hills_786255-115.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.container {
+  background: var(--card-bg);
+  padding: 40px 50px;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  max-width: 1000px;
+  width: 100%;
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--accent-dark);
+  font-size: 36px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: var(--text-color);
+  position: relative;
+}
+
+input, select {
+  padding: 12px 15px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,0.2);
+  font-size: 15px;
+  margin-top: 8px;
+  background: rgba(255,255,255,0.9);
+  transition: 0.2s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(76,175,80,0.3);
+}
+
+button {
+  grid-column: 1 / -1;
+  padding: 14px 22px;
+  border: none;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Prediction display inside form */
+#prediction {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--accent-dark);
+  margin-top: 20px;
+  background: rgba(255,255,255,0.25);
+  padding: 15px 20px;
+  border-radius: var(--radius);
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
+}
+
+#prediction.show {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Responsive: 1 column on small screens */
+@media (max-width: 960px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+}

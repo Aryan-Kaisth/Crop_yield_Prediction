@@ -1,0 +1,20 @@
+[2025-10-20 22:09:22,907] 52 root - INFO - Entered the load_object method of utils
+[2025-10-20 22:09:23,753] 59 root - INFO - Exited the load_object method of utils
+[2025-10-20 22:09:23,753] 52 root - INFO - Entered the load_object method of utils
+[2025-10-20 22:09:23,755] 59 root - INFO - Exited the load_object method of utils
+[2025-10-20 22:09:23,755] 22 root - INFO - \u2705 PredictionPipeline initialized successfully.
+[2025-10-20 22:09:42,400] 55 root - INFO - Received prediction request: {'Region': 'North', 'Soil_Type': 'Silt', 'Crop': 'Maize', 'Rainfall_mm': 43.0, 'Temperature_Celsius': 75.0, 'Fertilizer_Used': 'Yes', 'Irrigation_Used': 'Yes', 'Weather_Condition': 'Sunny', 'Days_to_Harvest': 55}
+[2025-10-20 22:09:42,403] 37 root - INFO - \U0001f504 Transforming input features using preprocessor...
+[2025-10-20 22:09:42,416] 40 root - INFO - \U0001f9e0 Generating predictions using trained model...
+[2025-10-20 22:09:42,417] 43 root - INFO - \u2705 Predictions generated successfully. Shape: (1,)
+[2025-10-20 22:09:42,417] 59 root - INFO - Prediction result: 4.407191235235535
+[2025-10-20 22:11:35,145] 55 root - INFO - Received prediction request: {'Region': 'North', 'Soil_Type': 'Sandy', 'Crop': 'Maize', 'Rainfall_mm': 34.0, 'Temperature_Celsius': 45.0, 'Fertilizer_Used': 'Yes', 'Irrigation_Used': 'Yes', 'Weather_Condition': 'Sunny', 'Days_to_Harvest': 11}
+[2025-10-20 22:11:35,147] 37 root - INFO - \U0001f504 Transforming input features using preprocessor...
+[2025-10-20 22:11:35,154] 40 root - INFO - \U0001f9e0 Generating predictions using trained model...
+[2025-10-20 22:11:35,155] 43 root - INFO - \u2705 Predictions generated successfully. Shape: (1,)
+[2025-10-20 22:11:35,155] 59 root - INFO - Prediction result: 3.7678016445791815
+[2025-10-20 22:12:48,136] 55 root - INFO - Received prediction request: {'Region': 'South', 'Soil_Type': 'Silt', 'Crop': 'Wheat', 'Rainfall_mm': 730.379174, 'Temperature_Celsius': 31.620687, 'Fertilizer_Used': 'Yes', 'Irrigation_Used': 'Yes', 'Weather_Condition': 'Cloudy', 'Days_to_Harvest': 110}
+[2025-10-20 22:12:48,137] 37 root - INFO - \U0001f504 Transforming input features using preprocessor...
+[2025-10-20 22:12:48,146] 40 root - INFO - \U0001f9e0 Generating predictions using trained model...
+[2025-10-20 22:12:48,147] 43 root - INFO - \u2705 Predictions generated successfully. Shape: (1,)
+[2025-10-20 22:12:48,147] 59 root - INFO - Prediction result: 6.977537461572909

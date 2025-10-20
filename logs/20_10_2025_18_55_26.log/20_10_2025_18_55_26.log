@@ -1,0 +1,9 @@
+[2025-10-20 18:55:26,436] 43 root - INFO - ===== Data Ingestion Process Started =====
+[2025-10-20 18:55:41,800] 35 root - INFO - Fetched 1000000 rows from table 'crop_yield'
+[2025-10-20 18:55:41,852] 47 root - INFO - Data shape: (1000000, 10)
+[2025-10-20 18:55:44,176] 51 root - INFO - Raw data saved at artifacts\data_ingestion\raw.csv with shape (1000000, 10)
+[2025-10-20 18:55:44,176] 54 root - INFO - Splitting data into train and test sets...
+[2025-10-20 18:55:47,212] 63 root - INFO - Train data saved at artifacts\data_ingestion\train.csv with shape (800000, 10)
+[2025-10-20 18:55:47,867] 65 root - INFO - Test data saved at artifacts\data_ingestion\test.csv with shape (200000, 10)
+[2025-10-20 18:55:47,871] 67 root - INFO - ===== Data Ingestion Completed Successfully =====
+[2025-10-20 18:55:48,387] 37 root - ERROR - Error initializing DataTransformation with schema

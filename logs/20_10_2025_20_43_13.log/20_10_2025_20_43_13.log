@@ -1,0 +1,15 @@
+[2025-10-20 20:43:13,408] 52 root - INFO - Entered the load_object method of utils
+[2025-10-20 20:43:14,342] 59 root - INFO - Exited the load_object method of utils
+[2025-10-20 20:43:14,343] 52 root - INFO - Entered the load_object method of utils
+[2025-10-20 20:43:14,343] 59 root - INFO - Exited the load_object method of utils
+[2025-10-20 20:43:14,343] 22 root - INFO - \u2705 PredictionPipeline initialized successfully.
+[2025-10-20 20:43:16,091] 55 root - INFO - Received prediction request: {'Region': 'South', 'Soil_Type': 'Clay', 'Crop': 'Rice', 'Rainfall_mm': 992.673282, 'Temperature_Celsius': 18.026142, 'Fertilizer_Used': 'Yes', 'Irrigation_Used': 'Yes', 'Weather_Condition': 'Rainy', 'Days_to_Harvest': 140}
+[2025-10-20 20:43:16,097] 37 root - INFO - \U0001f504 Transforming input features using preprocessor...
+[2025-10-20 20:43:16,101] 40 root - INFO - \U0001f9e0 Generating predictions using trained model...
+[2025-10-20 20:43:16,102] 43 root - INFO - \u2705 Predictions generated successfully. Shape: (1,)
+[2025-10-20 20:43:16,102] 59 root - INFO - Prediction result: 8.028413221616853
+[2025-10-20 20:44:18,822] 55 root - INFO - Received prediction request: {'Region': 'North', 'Soil_Type': 'Sandy', 'Crop': 'Soybean', 'Rainfall_mm': 986.866331, 'Temperature_Celsius': 16.64419, 'Fertilizer_Used': 'No', 'Irrigation_Used': 'Yes', 'Weather_Condition': 'Rainy', 'Days_to_Harvest': 146}
+[2025-10-20 20:44:18,826] 37 root - INFO - \U0001f504 Transforming input features using preprocessor...
+[2025-10-20 20:44:18,831] 40 root - INFO - \U0001f9e0 Generating predictions using trained model...
+[2025-10-20 20:44:18,832] 43 root - INFO - \u2705 Predictions generated successfully. Shape: (1,)
+[2025-10-20 20:44:18,832] 59 root - INFO - Prediction result: 6.470936025983453

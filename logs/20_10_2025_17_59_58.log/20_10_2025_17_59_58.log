@@ -1,0 +1,8 @@
+[2025-10-20 17:59:59,194] 43 root - INFO - ===== Data Ingestion Process Started =====
+[2025-10-20 18:00:14,319] 35 root - INFO - Fetched 1000000 rows from table 'crop_yield'
+[2025-10-20 18:00:14,369] 47 root - INFO - Data shape: (1000000, 10)
+[2025-10-20 18:00:16,699] 51 root - INFO - Raw data saved at artifacts\data_ingestion\raw.csv with shape (1000000, 10)
+[2025-10-20 18:00:16,699] 54 root - INFO - Splitting data into train and test sets...
+[2025-10-20 18:00:19,795] 63 root - INFO - Train data saved at artifacts\data_ingestion\train.csv with shape (800000, 10)
+[2025-10-20 18:00:20,459] 65 root - INFO - Test data saved at artifacts\data_ingestion\test.csv with shape (200000, 10)
+[2025-10-20 18:00:20,462] 67 root - INFO - ===== Data Ingestion Completed Successfully =====

@@ -1,0 +1,17 @@
+[2025-10-20 18:57:01,041] 43 root - INFO - ===== Data Ingestion Process Started =====
+[2025-10-20 18:57:16,225] 35 root - INFO - Fetched 1000000 rows from table 'crop_yield'
+[2025-10-20 18:57:16,274] 47 root - INFO - Data shape: (1000000, 10)
+[2025-10-20 18:57:18,591] 51 root - INFO - Raw data saved at artifacts\data_ingestion\raw.csv with shape (1000000, 10)
+[2025-10-20 18:57:18,591] 54 root - INFO - Splitting data into train and test sets...
+[2025-10-20 18:57:21,515] 63 root - INFO - Train data saved at artifacts\data_ingestion\train.csv with shape (800000, 10)
+[2025-10-20 18:57:22,169] 65 root - INFO - Test data saved at artifacts\data_ingestion\test.csv with shape (200000, 10)
+[2025-10-20 18:57:22,172] 67 root - INFO - ===== Data Ingestion Completed Successfully =====
+[2025-10-20 18:57:22,668] 33 root - INFO - Schema loaded successfully. Numerical: ['Rainfall_mm', 'Temperature_Celsius', 'Days_to_Harvest'], Target: Yield_tons_per_hectare
+[2025-10-20 18:57:22,668] 64 root - INFO - Reading train and test data
+[2025-10-20 18:57:23,418] 68 root - INFO - Applying feature engineering on train and test data
+[2025-10-20 18:57:23,462] 77 root - INFO - Creating preprocessing pipeline
+[2025-10-20 18:57:23,463] 80 root - INFO - Fitting preprocessor on training data
+[2025-10-20 18:57:24,411] 84 root - INFO - Saving transformed data and preprocessor
+[2025-10-20 18:57:24,616] 68 root - INFO - Entered the save_object method of utils
+[2025-10-20 18:57:24,619] 75 root - INFO - Exited the save_object method of utils
+[2025-10-20 18:57:24,619] 91 root - INFO - Data transformation completed and saved successfully at artifacts\data_transformation\preprocessor.pkl

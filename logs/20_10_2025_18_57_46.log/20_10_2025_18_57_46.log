@@ -1,0 +1,29 @@
+[2025-10-20 18:57:46,574] 43 root - INFO - ===== Data Ingestion Process Started =====
+[2025-10-20 18:58:01,820] 35 root - INFO - Fetched 1000000 rows from table 'crop_yield'
+[2025-10-20 18:58:01,871] 47 root - INFO - Data shape: (1000000, 10)
+[2025-10-20 18:58:04,177] 51 root - INFO - Raw data saved at artifacts\data_ingestion\raw.csv with shape (1000000, 10)
+[2025-10-20 18:58:04,178] 54 root - INFO - Splitting data into train and test sets...
+[2025-10-20 18:58:07,087] 63 root - INFO - Train data saved at artifacts\data_ingestion\train.csv with shape (800000, 10)
+[2025-10-20 18:58:07,742] 65 root - INFO - Test data saved at artifacts\data_ingestion\test.csv with shape (200000, 10)
+[2025-10-20 18:58:07,745] 67 root - INFO - ===== Data Ingestion Completed Successfully =====
+[2025-10-20 18:58:08,241] 33 root - INFO - Schema loaded successfully. Numerical: ['Rainfall_mm', 'Temperature_Celsius', 'Days_to_Harvest'], Target: Yield_tons_per_hectare
+[2025-10-20 18:58:08,241] 64 root - INFO - Reading train and test data
+[2025-10-20 18:58:09,002] 68 root - INFO - Applying feature engineering on train and test data
+[2025-10-20 18:58:09,045] 77 root - INFO - Creating preprocessing pipeline
+[2025-10-20 18:58:09,045] 80 root - INFO - Fitting preprocessor on training data
+[2025-10-20 18:58:09,962] 84 root - INFO - Saving transformed data and preprocessor
+[2025-10-20 18:58:10,174] 68 root - INFO - Entered the save_object method of utils
+[2025-10-20 18:58:10,176] 75 root - INFO - Exited the save_object method of utils
+[2025-10-20 18:58:10,176] 91 root - INFO - Data transformation completed and saved successfully at artifacts\data_transformation\preprocessor.pkl
+[2025-10-20 18:58:10,189] 18 root - INFO - ModelTrainer initialized. Model will be saved at artifacts\model_trainer\reg.pkl
+[2025-10-20 18:58:10,189] 26 root - INFO - Model training started
+[2025-10-20 18:58:10,189] 29 root - INFO - LinearRegression model instance created
+[2025-10-20 18:58:10,578] 33 root - INFO - Model training completed
+[2025-10-20 18:58:10,578] 36 root - INFO - Predicting on training and test data
+[2025-10-20 18:58:10,603] 41 root - INFO - Evaluating model performance
+[2025-10-20 18:58:10,637] 49 root - INFO - Train R2: 0.9130, Test R2: 0.9130
+[2025-10-20 18:58:10,638] 50 root - INFO - Train RMSE: 0.5003, Test RMSE: 0.5007
+[2025-10-20 18:58:10,638] 51 root - INFO - Train MAE: 0.3992, Test MAE: 0.3995
+[2025-10-20 18:58:10,638] 68 root - INFO - Entered the save_object method of utils
+[2025-10-20 18:58:10,639] 75 root - INFO - Exited the save_object method of utils
+[2025-10-20 18:58:10,639] 55 root - INFO - Trained model saved at: artifacts\model_trainer\reg.pkl

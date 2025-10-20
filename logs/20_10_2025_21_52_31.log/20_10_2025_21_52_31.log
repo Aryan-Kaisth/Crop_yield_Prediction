@@ -1,0 +1,10 @@
+[2025-10-20 21:52:31,899] 52 root - INFO - Entered the load_object method of utils
+[2025-10-20 21:52:32,697] 59 root - INFO - Exited the load_object method of utils
+[2025-10-20 21:52:32,698] 52 root - INFO - Entered the load_object method of utils
+[2025-10-20 21:52:32,698] 59 root - INFO - Exited the load_object method of utils
+[2025-10-20 21:52:32,698] 22 root - INFO - \u2705 PredictionPipeline initialized successfully.
+[2025-10-20 21:52:44,192] 55 root - INFO - Received prediction request: {'Region': 'North', 'Soil_Type': 'Sandy', 'Crop': 'Maize', 'Rainfall_mm': 350.0, 'Temperature_Celsius': 24.0, 'Fertilizer_Used': 'Yes', 'Irrigation_Used': 'Yes', 'Weather_Condition': 'Sunny', 'Days_to_Harvest': 120}
+[2025-10-20 21:52:44,193] 37 root - INFO - \U0001f504 Transforming input features using preprocessor...
+[2025-10-20 21:52:44,202] 40 root - INFO - \U0001f9e0 Generating predictions using trained model...
+[2025-10-20 21:52:44,202] 43 root - INFO - \u2705 Predictions generated successfully. Shape: (1,)
+[2025-10-20 21:52:44,203] 59 root - INFO - Prediction result: 4.930330007597681

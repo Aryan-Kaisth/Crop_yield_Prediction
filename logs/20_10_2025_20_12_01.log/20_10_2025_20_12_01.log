@@ -1,0 +1,9 @@
+[2025-10-20 20:12:01,824] 52 root - INFO - Entered the load_object method of utils
+[2025-10-20 20:12:02,706] 59 root - INFO - Exited the load_object method of utils
+[2025-10-20 20:12:02,706] 52 root - INFO - Entered the load_object method of utils
+[2025-10-20 20:12:02,706] 59 root - INFO - Exited the load_object method of utils
+[2025-10-20 20:12:02,706] 22 root - INFO - \u2705 PredictionPipeline initialized successfully.
+[2025-10-20 20:12:58,116] 55 root - INFO - Received prediction request: {'Region': 'west', 'Soil_Type': 'Loam', 'Crop': 'Cotton', 'Rainfall_mm': 587.0, 'Temperature_Celsius': 23.0, 'Fertilizer_Used': 'yes', 'Irrigation_Used': 'Yes', 'Weather_Condition': 'Sunny', 'Days_to_Harvest': 12}
+[2025-10-20 20:12:58,121] 37 root - INFO - \U0001f504 Transforming input features using preprocessor...
+[2025-10-20 20:12:58,129] 47 root - ERROR - \u274c Error occurred during prediction.
+[2025-10-20 20:12:58,129] 62 root - ERROR - Prediction failed: Error occurred in python script [C:\AI Pwskill\Crop Yield Prediction\src\pipelines\prediction_pipeline.py] line number [38] error message [Found unknown categories ['west'] in column 0 during transform]
