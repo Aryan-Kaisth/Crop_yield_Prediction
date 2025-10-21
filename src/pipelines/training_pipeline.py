@@ -6,7 +6,7 @@ def run_training_pipeline():
     """
     Runs the full training pipeline:
     1. Data ingestion
-    2. Data transformation + SMOTE
+    2. Data transformation
     3. Model training
     """
 
