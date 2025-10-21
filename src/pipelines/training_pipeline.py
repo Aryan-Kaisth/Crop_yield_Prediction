@@ -2,7 +2,7 @@ import os, sys
 from src.logger import logging
 from src.exception import CustomException
 
-def run_training_pipeline(raw_data_path: str):
+def run_training_pipeline():
     """
     Runs the full training pipeline:
     1. Data ingestion
@@ -17,7 +17,7 @@ def run_training_pipeline(raw_data_path: str):
         from src.components.data_ingestion import DataIngestion, DataIngestionConfig
         ingestion_config = DataIngestionConfig()
         data_ingestion = DataIngestion(config=ingestion_config)
-        train_path, test_path = data_ingestion.initiate_data_ingestion(source_path=raw_data_path)
+        train_path, test_path = data_ingestion.initiate_data_ingestion()
         logging.info(f"Data ingestion completed. Train: {train_path}, Test: {test_path}")
 
         # --- Data Transformation ---
